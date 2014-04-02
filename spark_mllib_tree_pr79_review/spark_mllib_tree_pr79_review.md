@@ -243,11 +243,16 @@ The training command (with additional JVM settings) used is
     --args --maxBins --args 100
 
 
-The raw numbers for training each level and for each choice
-of number of workers is in the attachment `workers_times.txt`.
-The attached graphs `workers_times.pdf` and `workers_speedups.pdf`
-demonstrate the scalability in terms of cumulative training times
-for various depths and various number of workers.
+The training times for training each depth and for each choice
+of number of workers is in the attachments
+[workers_times.txt](https://raw.githubusercontent.com/hirakendu/temp/master/spark_mllib_tree_pr79_review/workers_times.txt).
+The attached graphs  demonstrate the scalability in terms of
+cumulative training times for various depths and various number of workers.
+
+![](https://raw.githubusercontent.com/hirakendu/temp/master/spark_mllib_tree_pr79_review/workers_times.png)
+
+![](https://raw.githubusercontent.com/hirakendu/temp/master/spark_mllib_tree_pr79_review/workers_speedups.png)
+
 
 For obtaining the speed-ups, the training times are compared to those
 for 60 workers, since the data could not be cached completely for
@@ -266,4 +271,6 @@ The dataset when fully cached takes about 10s for a count operation,
 whereas the training time for first level that involves simple histogram
 calculation of three error statistics takes roughly 30 seconds.
 
+The error performance in terms of RMSE was verified to be close to
+that of alternate implementations.
 
