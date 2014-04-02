@@ -205,6 +205,8 @@ The dataset is of size about 90 GB in plain text format.
 It consists of 100 part files, each about 900 MB.
 To _optimize_ number of tasks to align with number of workers,
 the task split size was chosen to be 160 MB to have 300 tasks.
+The in-memory storage size is also around 90 GB (coincidentally)
+when cached.
 
 The model training experiements were done on a Yahoo internal Hadoop cluster.
 The CPUs are of type Intel Xeon 2.4 GHz.
