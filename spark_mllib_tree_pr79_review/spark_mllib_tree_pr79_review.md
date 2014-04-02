@@ -196,7 +196,7 @@ and implementations of specific error functions, `SquareLoss` and `EntropyLoss`.
 The code was tested on a dataset for a binary classification problem.
 A regression tree with `Variance` (square loss) was trained because
 it's computationally more intensive.
-The dataset consists of about `500,000` training instances.
+The dataset consists of about `500,000,000` training instances.
 There are 20 features, all numeric. Although there are categorical features
 in the dataset and the algorithm implementation supports it,
 they were not used since the main program doesn't have options.
